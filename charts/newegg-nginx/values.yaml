@@ -5,7 +5,7 @@
 
 ServiceType: NodePort
 Image: 10.45.59.250/k8s/nginx-test
-Imagetag: 'latest'
+Imagetag: '1.0'
 Replicas: 3
 ImagePullPolicy: "Always"
 Cpu: "10m"
