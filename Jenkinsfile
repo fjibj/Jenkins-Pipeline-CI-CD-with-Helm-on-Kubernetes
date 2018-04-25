@@ -76,19 +76,19 @@ node {
                 // https://issues.jenkins-ci.org/browse/JENKINS-29037
                 //
                 waitUntil {
-                    sh "ss -antup | grep 18000 | grep LISTEN | wc -l | tr -d '\n' > /tmp/wait_results"
+                    sh "ss -antup | grep 80 | grep LISTEN | wc -l | tr -d '\n' > /tmp/wait_results"
                     wait_results = readFile '/tmp/wait_results'
 
                     echo "Wait Results(${wait_results})"
                     if ("${wait_results}" == "1")
                     {
-                        echo "Nginx is listening on port 18000"
+                        echo "Nginx is listening on port 80"
                         sh "rm -f /tmp/wait_results"
                         return true
                     }
                     else
                     {
-                        echo "Nginx is not listening on port 18000 yet"
+                        echo "Nginx is not listening on port 80 yet"
                         return false
                     }
                 } // end of waitUntil
