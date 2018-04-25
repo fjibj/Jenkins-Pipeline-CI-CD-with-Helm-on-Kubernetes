@@ -45,7 +45,8 @@ node {
     git url: 'https://github.com/judexzhu/Jenkins-Pipeline-CI-CD-with-Helm-on-Kubernetes.git'
     
     def inputFile = readFile('config.json')
-    def config = new groovy.json.JsonSlurperClassic().parseText(inputFile)
+    // def config = new groovy.json.JsonSlurperClassic().parseText(inputFile)
+    def config = readJSON file:'config.json'
     println "pipeline config ==> ${config}"
     
     stage 'Building Nginx Container for Docker Hub'
