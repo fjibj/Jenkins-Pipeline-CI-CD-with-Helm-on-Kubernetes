@@ -68,7 +68,7 @@ node {
             stage "Running Nginx container"
             
             // Run the container with the env file, mounted volumes and the ports:
-            docker.image("${maintainer_name}/${container_name}:${build_tag}").withRun("--rm --name=${container_name}  -p 18000:80 ")  { c ->
+            docker.image("${maintainer_name}/${container_name}:${build_tag}").withRun("--name=${container_name}  -p 18000:80 ")  { c ->
                    
                 // wait for the django server to be ready for testing
                 // the 'waitUntil' block needs to return true to stop waiting
