@@ -34,8 +34,10 @@ def helmDeploy(Map args) {
 node {
     
     // Setup the Docker Registry (Docker Hub) + Credentials 
-    registry_url = "https://index.docker.io/v1/" // Docker Hub
-    docker_creds_id = "judexzhu-DockerHub" // name of the Jenkins Credentials ID
+    // registry_url = "https://index.docker.io/v1/" // Docker Hub
+    registry_url = "10.45.59.250" // Harbor Address
+    // docker_creds_id = "judexzhu-DockerHub" // name of the Jenkins Credentials ID
+    docker_creds_id = "harbor" //jenkins harbor credential
     build_tag = "1.0" // default tag to push for to the registry
     
     def pwd = pwd()
