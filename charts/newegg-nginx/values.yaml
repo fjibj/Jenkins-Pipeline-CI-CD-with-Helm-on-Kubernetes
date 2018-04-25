@@ -4,7 +4,7 @@
 # name: value
 
 ServiceType: NodePort
-Image: judexzhu/nginx-test
+Image: k8s/nginx-test
 Imagetag: 'latest'
 Replicas: 3
 ImagePullPolicy: "Always"
