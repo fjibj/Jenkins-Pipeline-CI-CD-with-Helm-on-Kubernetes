@@ -38,7 +38,7 @@ node {
     registry_url = "http://10.45.59.250" // Harbor Address
     // docker_creds_id = "judexzhu-DockerHub" // name of the Jenkins Credentials ID
     docker_creds_id = "harbor" //jenkins harbor credential
-    build_tag = "1.0" // default tag to push for to the registry
+    build_tag = "2.0" // default tag to push for to the registry
     
     def pwd = pwd()
     def chart_dir = "${pwd}/charts/newegg-nginx"
