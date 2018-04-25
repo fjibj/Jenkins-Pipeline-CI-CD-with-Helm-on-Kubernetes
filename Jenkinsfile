@@ -55,7 +55,7 @@ node {
     docker.withRegistry("${registry_url}", "${docker_creds_id}") {
     
         // Set up the container to build 
-        maintainer_name = "judexzhu"
+        maintainer_name = "k8s"  //harbor project name
         container_name = "nginx-test"
         
 
