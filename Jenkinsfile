@@ -95,7 +95,7 @@ node {
                 
                 // At this point Nginx is running
                 echo "Docker Container is running"
-                input 'You can Check the running Docker Container on docker builder server now! Click process to the next stage!!'    
+                // input 'You can Check the running Docker Container on docker builder server now! Click process to the next stage!!'    
                 // this pipeline is using 3 tests 
                 // by setting it to more than 3 you can test the error handling and see the pipeline Stage View error message
                 MAX_TESTS = 3
@@ -152,7 +152,7 @@ node {
         }
         
         stage "Pushing"
-        input 'Do you approve Pushing?'
+        // input 'Do you approve Pushing?'
         container.push()
         
         currentBuild.result = 'SUCCESS'
